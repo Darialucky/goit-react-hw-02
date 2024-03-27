@@ -1,0 +1,9 @@
+.block {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  background-color: aquamarine;
+}
