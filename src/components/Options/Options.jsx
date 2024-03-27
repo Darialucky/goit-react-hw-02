@@ -1,5 +1,5 @@
-import css from "./Option.module.css";
-const Option = ({ callback, totalFeedback, reset }) => {
+import css from "./Options.module.css";
+const Options = ({ callback, totalFeedback, reset }) => {
   return (
     <div className={css.block}>
       <button className={css.btn} onClick={() => callback("good")}>
@@ -21,4 +21,4 @@ const Option = ({ callback, totalFeedback, reset }) => {
     </div>
   );
 };
-export default Option;
+export default Options;

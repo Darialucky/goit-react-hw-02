@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import Option from "../Option/Option";
+import Options from "../Options/Options";
 import Description from "../Description/Description";
 import Notification from "../Notification/Notification";
 import Feedback from "../Feedback/Feedback";
@@ -35,7 +35,7 @@ function App() {
   };
 
   useEffect(() => {
-    window.localStorage.setItem("save-feedbacks", JSON.stringify(state));
+    window.localStorage.setItem("saved-state", JSON.stringify(state));
   }, [state]);
 
   const totalFeedback = state.good + state.neutral + state.bad;
@@ -44,7 +44,7 @@ function App() {
   return (
     <div>
       <Description />
-      <Option
+      <Options
         callback={updateFeedback}
         totalFeedback={totalFeedback}
         reset={resetFeedback}
